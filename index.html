@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <title>Predictions</title>
+</head>
+<style>
+     #mainHeading {
+        font-family: 'Times New Roman', Times, serif;
+        /* color: white; */
+        font-size: 50px;
+        font-weight: bold;
+    }
+    #suggestionText {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+    }
+    .form-container {
+        margin: auto;
+        margin-top: 70px;
+        width: 60%;
+        border-radius: 10px;
+        height: 320px;
+        padding: 15px;
+    }
+    .inputLabel {
+        color: white;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .btn {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        border-radius: 10px;
+        background-color: gainsboro;
+    }
+    ::placeholder {
+        font-family: 'Times New Roman', Times, serif;
+    }
+    input {
+        color: black;
+    }
+
+</style>
+
+<body>
+    <center>
+        <h2 id="mainHeading">Word Prediction</h2>
+    </center>
+    <!-- CONTAINER-1 -->
+    <div class="container-1">
+        <div class="form-container">
+            <div class="form-group">
+                <form id="Form">
+                    <label class="inputLabel" for="text_field">Text</label>
+                    <input class="form-control" name="text_field" style="color: black;" autocomplete="off" placeholder="Enter Text">
+                </form>
+            </div>
+            <div class="button-container"></div>
+        </div>
+    </div>
+
+
+    
+</body>
+<script src="b_index.js"></script>
+</html>
