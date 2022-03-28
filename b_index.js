@@ -55,13 +55,12 @@ function Predict(input, type) {
     if (type === 'predict') {
         fileToOpen = "paragraphs.txt"
     }
-    else if (type == 'complete') {
+    else if (type === 'complete') {
         fileToOpen = "words.txt"
     }
     fetch(fileToOpen)
     .then(response => response.text())
     .then(file => {
-        let senences
         let completions = []
         if (type === 'predict') {
             sentences = file.toLowerCase().replace(/\n/g, ' ').split(' ')
@@ -79,10 +78,10 @@ function Predict(input, type) {
 
         let textField = document.forms["Form"]["text_field"].value
         let buttonContainer = document.querySelector('.button-container')
-        if (textField != "") {
+        if (textField !== "") {
             let completions = computeMapping(input, type)
             removeAllChildNodes(buttonContainer)
-            if (completions != undefined) {
+            if (completions !== undefined) {
                 if (completions instanceof Set) {
                     completions = castSetToArray(completions)
                     for (let i = 0; i < completions.length; i++) {
@@ -141,7 +140,7 @@ function Predict(input, type) {
                 else {
                     let storedKey = new HashTable(found[data[i]]).key
                     let next = data[i+1]
-                    if (storedKey == next) {
+                    if (storedKey === next) {
                         let pVal = {}
                         pVal[next] = found[data[i]][next]+1
                         found[data[i]] = pVal
